@@ -1,0 +1,5 @@
+bazel-*
+.idea
+node_modules
+
+lerna-debug.log

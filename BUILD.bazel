@@ -1,0 +1,3 @@
+# Needed so that tsconfig.json can be referenced from BUILD rules.
+
+exports_files(["tsconfig.json"])

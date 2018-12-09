@@ -1,0 +1,24 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+ts_library(
+    name = "foo",
+    srcs = glob(["*.ts"]),
+    module_name = "@monorepo/foo",
+    module_root = "index",
+    deps = ["//packages/node/bar"],
+)
+
+###
+# Packaging
+###
+load("@build_bazel_rules_nodejs//:defs.bzl", "npm_package")
+
+npm_package(
+    name = "foo_packaged",
+    srcs = ["package.json"],
+    deps = [":foo"],
+)
+
+# TODO: Run lerna add after building dependent...

@@ -1,0 +1,1 @@
+* packages/node/** cannot depend between one another
