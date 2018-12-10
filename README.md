@@ -1,1 +1,1 @@
-* packages/node/** cannot depend between one another
+Bazel and the design decisions it's made aren't really at a point to satisfy my requirements - I hope to revisit it later.
